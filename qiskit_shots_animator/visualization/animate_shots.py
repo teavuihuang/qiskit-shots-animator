@@ -79,6 +79,7 @@ def recreate_shots_from_counts( counts ):
     """
     raw_shots = []
     for k, v in counts.items():
+        k = k[::-1]
         for x in range(v):
             raw_shots.append(k.replace(" ", ""))
     return raw_shots
